@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    es2015 = require('babel-preset-es2015'),
     plugins = require('gulp-load-plugins')();
 
 var publishDir = 'web/dist';
@@ -16,10 +17,11 @@ gulp.task('less', function() {
 
 gulp.task('scripts', function() {
     return gulp.src('compile/script/**/*.js')
-        .pipe(plugins.jshint()) // 检查js文件
-        .pipe(plugins.jshint.reporter('default')) // 对代码进行报错提示
+        .pipe(plugins.babel({ presets: [es2015] })) // 把es6 => es5
         .pipe(plugins.concat('main.min.js')) // 把所有js文件合成一个 main.min.js文件
-        .pipe(plugins.uglify()) // 对js文件压缩
+        // .pipe(plugins.jshint()) // 检查js文件
+        // .pipe(plugins.jshint.reporter('default')) // 对代码进行报错提示
+        .pipe(plugins.uglify().on('error', plugins.util.log)) // 对js文件压缩
         .pipe(gulp.dest(publishDir + '/js'))
 })
 

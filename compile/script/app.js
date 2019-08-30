@@ -1,8 +1,10 @@
+'use strict';
+
 function init() {
     console.log('Init');
 }
 
-window.onload = function(event) {
-	console.log(event);
-	init();
-};
+document.addEventListener('load', (e) => {
+    console.log(e);
+    init();
+});
