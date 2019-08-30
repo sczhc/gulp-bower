@@ -1,9 +1,9 @@
-# gulp bower 前端自动化构建
+gulp bower 前端自动化构建
 
-# install dependencies
-npm install
-bower install
+install dependencies
+# npm install
+# bower install
 
-# 监听
-gulp bower
-gulp
+监听
+# gulp bower
+# gulp
