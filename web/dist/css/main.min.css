@@ -1,1 +1,1 @@
-*{margin:0;padding:0}body{width:100%;font-size:16px}.first{font-size:1.5rem;color:#fff;background-color:#000}
+@-webkit-keyframes a{0%{left:0}to{left:200px}}@keyframes a{0%{left:0}to{left:200px}}*{margin:0;padding:0}body{width:100%;font-size:16px}.first{font-size:1.5rem;color:#fff;background-color:#000;-webkit-transform:translate(0);transform:translate(0)}.square{width:100px;height:100px;background:red;position:relative;-webkit-animation:a 5s infinite;animation:a 5s infinite}

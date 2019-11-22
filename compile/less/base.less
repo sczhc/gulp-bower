@@ -1,3 +1,5 @@
+@import './keyframes.less';
+
 * {
     margin: 0;
     padding: 0;
@@ -12,4 +14,13 @@ body {
     font-size: 1.5rem;
     color: #fff;
     background-color: #000;
+    transform: translate(0,0);
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation: mymove 5s infinite;
 }
