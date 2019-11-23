@@ -36,9 +36,7 @@ gulp.task('bower-files', function() {
             overrides: {
                 "bootstrap": {
                     main: [
-                        'dist/js/*.min.js',
-                        'dist/css/*.min.*',
-                        'dist/fonts/*.*'
+                        'dist/**/*.min.*'
                     ]
                 },
                 "jquery": {
