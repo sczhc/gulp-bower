@@ -1,11 +1,5 @@
-window.onload = function (e) {
+window.onload = (e) => {
     console.log(e);
-    init();
-}
-
-function init() {
-    let arr = 1;
-    console.log(arr);
 }
 
 // 图片加载完成
@@ -21,7 +15,7 @@ function imgLoad(ele) {
         $(pic).on('load', () => {
             $(this).remove();
             flag++;
-            if(flag == imgTotal) {
+            if (flag == imgTotal) {
                 // do something
             }
         })
