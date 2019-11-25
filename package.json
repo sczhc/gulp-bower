@@ -2,9 +2,12 @@
   "name": "gulp-bower",
   "version": "1.0.0",
   "browserslist": [
-    "last 1 version",
+    "last 2 version",
+    "last 3 Safari versions",
+    "Firefox >= 20",
+    "Opera >= 10",
     "> 1%",
-    "IE 10"
+    "IE >= 8"
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
