@@ -23,6 +23,24 @@ task('scripts', function () {
         .pipe(dest(publishDir + '/js'))
 })
 
+/**
+ * gulp-cache 缓存
+ * gulp-imagemin 压缩图片
+ * optimizationLevel(Number) 默认：3  取值范围：0-7（优化等级）
+ * progressive(Boolean)  默认：false 无损压缩jpg图片
+ * interlaced(Boolean)  默认：false 隔行扫描gif进行渲染
+ * multipass(Boolean)  默认：false 多次优化svg直到完全优化
+ * verbose(Boolean) 是否输出详细信息
+ */
+task('imagemin', function () {
+    return src('origin_images/**/*.*')
+        .pipe(plugins.cache(plugins.imagemin(
+            [plugins.imagemin.optipng({ optimizationLevel: 7 })],
+            { verbose: false }
+        )))
+        .pipe(dest(publishDir + '/images'))
+})
+
 task('clean-bower-files', function () {
     return src(publishDir + '/bower/*', { read: false })
         .pipe(plugins.clean({ force: true }))
@@ -49,10 +67,11 @@ task('bower-files', function () {
 
 task('default',
     series(
-        parallel('less', 'scripts'),
+        parallel('less', 'scripts', 'imagemin'),
         function watcher() {
             watch('compile/script/**/*.js', parallel('scripts'));
             watch('compile/less/**/*.less', parallel('less'));
+            watch('origin_images/**/*.*', parallel('imagemin'));
         }
     )
 )
