@@ -59,6 +59,11 @@ task('bower-files', function () {
                     main: [
                         'dist/*.min.js'
                     ]
+                },
+                "fancybox": {
+                    main: [
+                        'dist/*.min.*'
+                    ]
                 }
             }
         }))
