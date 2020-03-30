@@ -1,0 +1,37 @@
+.vertical {
+    .dialog-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 0;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, .5);
+
+        &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+
+        .dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size: 14px;
+            white-space: normal;
+
+            .content {
+                min-width: 240px;
+                min-height: 120px;
+                padding: 20px;
+            }
+        }
+    }
+}
