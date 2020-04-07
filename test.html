@@ -9,16 +9,48 @@
 
 <body>
     <style>
-        .dib-baseline {
-            display: inline-block;
-            width: 150px;
-            height: 150px;
-            border: 1px solid #cad5eb;
-            background-color: #f0f3f9;
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-size: 16px;
+        }
+
+        .clip {
+            position: absolute;
+            clip: rect(0 0 0 0);
+        }
+
+        .container {
+            height: 2000px;
+        }
+
+        .content {
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+        }
+
+        a {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
         }
     </style>
-    <span class="dib-baseline"></span>
-    <span class="dib-baseline">x-baseline</span>
+    <div class="container">
+        <div class="clip">123123</div>
+        <!-- <div class="content">123123</div> -->
+        <a href="#">回到顶部</a>
+    </div>
+    <script>
+        window.onload = function () {
+            var $clip = document.querySelector('.clip');
+            $clip.onclick = function () {
+                console.log('123')
+            }
+        }
+    </script>
 </body>
 
 </html>

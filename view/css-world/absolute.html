@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+</head>
+
+<body>
+    <style>
+        input {
+            width: 200px;
+            padding: 10px;
+        }
+
+        label[for] {
+            position: absolute;
+            margin-top: 9px;
+            margin-left: 10px;
+            color: #ccc;
+            cursor: auto;
+        }
+
+        .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: auto;
+        }
+    </style>
+    <div class="absolute">
+        <label for="test">姓名</label>
+        <input type="text" id="test">
+
+        <div class="content"></div>
+    </div>
+    <script>
+        window.onload = function () {
+            var $input = document.getElementById('test')
+            var $label = document.querySelector('label')
+            $input.oninput = function () {
+                var val = this.value
+                if (val) $label.style.display = 'none'
+                else $label.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>

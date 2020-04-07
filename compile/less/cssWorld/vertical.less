@@ -1,5 +1,6 @@
 .vertical {
     .dialog-container {
+        overflow: auto;
         position: fixed;
         top: 0;
         right: 0;
@@ -19,18 +20,23 @@
         }
 
         .dialog {
+            width: 100%;
             display: inline-block;
             text-align: left;
             vertical-align: middle;
             border-radius: 6px;
-            background-color: #fff;
+            // background-color: #fff;
             font-size: 14px;
             white-space: normal;
 
             .content {
-                min-width: 240px;
-                min-height: 120px;
-                padding: 20px;
+                // min-width: 240px;
+                // min-height: 120px;
+                padding: 100px;
+
+                img {
+                    max-width: 100%;
+                }
             }
         }
     }

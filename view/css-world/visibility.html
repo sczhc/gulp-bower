@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+</head>
+
+<body>
+    <style>
+        .menu-list {
+            position: absolute;
+            visibility: hidden;
+            height: 0;
+            border: 1px solid #eee;
+        }
+
+        a {
+            padding: 10px;
+        }
+
+        .menu:hover .menu-list {
+            height: auto;
+            visibility: visible;
+            transition: all .5s .2s;
+        }
+    </style>
+    <div class="visibility">
+        <div class="menu">
+            <a class="menu-item">页面</a>
+            <div class="menu-list">
+                <ul>
+                    <li>
+                        <a>首页</a>
+                    </li>
+                    <li>
+                        <a>联络我们</a>
+                    </li>
+                    <li>
+                        <a>咨询</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
