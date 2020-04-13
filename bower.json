@@ -11,6 +11,8 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "bootstrap": "^4.1.1",
-    "fancybox": "fancyBox#^3.5.7"
+    "fancybox": "fancyBox#^3.5.7",
+    "masonry-layout": "^4.2.2",
+    "imagesloaded": "^4.1.4"
   }
 }

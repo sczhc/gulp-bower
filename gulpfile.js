@@ -64,6 +64,16 @@ task('bower-files', function () {
                     main: [
                         'dist/*.min.*'
                     ]
+                },
+                "masonry-layout": {
+                    main: [
+                        'dist/*.min.*'
+                    ]
+                },
+                "imagesloaded": {
+                    main: [
+                        '*.min.*'
+                    ]
                 }
             }
         }))
