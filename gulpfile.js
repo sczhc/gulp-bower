@@ -74,6 +74,12 @@ task('bower-files', function () {
                     main: [
                         '*.min.*'
                     ]
+                },
+                "searchable-list": {
+                    main: [
+                        '*.css',
+                        '*.js'
+                    ]
                 }
             }
         }))

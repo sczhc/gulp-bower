@@ -13,6 +13,7 @@
     "bootstrap": "^4.1.1",
     "fancybox": "fancyBox#^3.5.7",
     "masonry-layout": "^4.2.2",
-    "imagesloaded": "^4.1.4"
+    "imagesloaded": "^4.1.4",
+    "searchable-list": "^2.0.0"
   }
 }
